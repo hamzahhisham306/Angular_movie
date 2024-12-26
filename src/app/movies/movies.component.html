@@ -1,0 +1,20 @@
+<div>
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)" class="search_container">
+  <input class="search" name="search" placeholder="search..." ngModel #search="ngModel"/>
+  <button type="submit">Submit</button>
+</form>
+<div class="movies">
+  <app-loading *ngIf="isLoading"></app-loading>
+  <ng-container *ngIf="!isLoading">
+    <div *ngFor="let movieA of movies; trackBy: trackByIndex" class="movie">
+      <app-card-movie [movie]="movieA"></app-card-movie>
+    </div>
+  </ng-container>
+</div>
+</div>
+
+<!-- ng-container
+Does not render	It does not create a real HTML tag in the DOM.
+Used for directives	Used to apply *ngIf, *ngFor, and other structural directives on multiple child elements.
+Invisible container	It groups multiple child elements logically without affecting the DOM.
+Improves DOM performance	Keeps your DOM clean and lightweight. -->

@@ -1,0 +1,16 @@
+<a [routerLink]="['/movies', movie().id]">
+  <img
+    [src]="'https://image.tmdb.org/t/p/w1280' + movie().poster_path"
+    alt="{{ movie().title }}"
+  />
+  <div class="movie-info">
+    <h3>{{ movie().title }}</h3>
+    <span [class]="getClassByRate(movie().vote_average)">{{
+      movie().vote_average
+    }}</span>
+  </div>
+  <div class="overview">
+    <h3>Overview:</h3>
+    {{ movie().overview }}
+  </div>
+</a>

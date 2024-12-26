@@ -1,0 +1,28 @@
+.movies{
+      display: flex ;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+}
+.search{
+  background-color: #fff;
+  margin: 2rem;
+}
+.search_container{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+.search_container button{
+  background-color: #fff;
+  padding: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  font-size: 14px;
+  color:#22254b ;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
